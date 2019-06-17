@@ -1,3 +1,51 @@
 .list-group-item {
   line-height: 2.5;
 }
+
+
+.background-color,.surveypage-background-color {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  opacity: 1;
+}
+
+.background-color {
+  background-image: url("../images/friends.jpg");
+}
+.surveypage-background-color{
+  background-image: url("../images/friends2.jpg");
+}
+
+.Navbarfont{
+  font-weight: bolder;
+}
+
+#pagetitle{
+  color: white;
+  letter-spacing: .5em;
+}
+.homepageContent{
+
+  transform: translate(0em, 10em )
+}
+
+.survey{
+  padding-left: 10em;
+  padding-right: 10em;
+  padding-top: 5em;
+}
+
+.question_header{
+  padding-top: 1em;
+}
+
+.survey h4{
+  font-size: 1.2em;
+}
+
+.survey-section{
+  background-color:#f5f5f5;
+}

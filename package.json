@@ -3,11 +3,9 @@
   "version": "1.0.0",
   "description": "### Overview",
   "main": "server.js",
-  "dependencies": {
-    "express": "^4.17.0",
-    "npm": "^6.9.0"
+  "directories": {
+    "test": "test"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -16,7 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/somramnani/FriendFinder.git"
   },
-  "author": "",
+  "author": "Som Ramnani",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/somramnani/FriendFinder/issues"

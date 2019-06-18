@@ -167,11 +167,34 @@
         <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
          Submit</button>
     </div>
-    </section>
+
+
+    <div id="bestfriendmodal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type = "button" class="close" data-dismiss = "modal">
+              &times;
+
+          </button>
+
+          <div class="modal-body">
+            <h2 id="bestFriend"></h2>
+            <img src="#" alt="" id="bestFriendPhoto">
+          </div>
+          <div class="modal-footer">
+            button.
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
 
    
 
     <hr>
+  </section>
     <footer class="footer">
       <div class="container">
         <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/afhaque/friendfinder">GitHub Repo</a></p>
@@ -179,6 +202,56 @@
     </footer>
 
   </div>
+
+
+  <script>
+  //Grabs the forms inputs
+  $("#submit").on("click", function() {
+    function validateForm() {
+      var isValid = true;
+        $('.form-control').each(function() {
+          if ($(this).val() === '') {
+              isValid = false;
+          }
+        });
+        $('chosen-select').each(function(){
+          if($(this).val()===""){
+            isValid = false;
+          }
+        });
+        return isValid;
+        }
+      //If all inputs are filled, validate response
+        if (validateForm()) {
+          var userData = {
+            name: $("#name").val(),
+            photo: $("#photo").val(),
+            scores: [
+            $("#q1").val(),
+            $("#q2").val(),
+            $("#q3").val(),
+            $("#q4").val(),
+            $("#q5").val(),
+            $("#q6").val(),
+            $("#q7").val(),
+            $("#q8").val(),
+            $("#q9").val(),
+            $("#q10").val(),
+          ]
+        };
+        //Ajax post to friendsapi
+          $.post(currentURL + "/api/friends", userData, function(data){
+            $("#matchName").text(data.name);
+            // $('#matchImg').attr("src", data.photo);
+            $("#resultsModal").modal('toggle');
+          });
+        }else{
+          alert("please fill out all fields before submitting");
+        }
+        return false;
+      });
+  
+  </script>
 
   
 

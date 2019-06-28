@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "### Overview",
   "main": "server.js",
-  "directories": {
-    "test": "test"
+  "dependencies": {
+    "express": "^4.17.1"
   },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -14,17 +15,10 @@
     "type": "git",
     "url": "git+https://github.com/somramnani/FriendFinder.git"
   },
-  "author": "Som Ramnani",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/somramnani/FriendFinder/issues"
   },
-  "homepage": "https://github.com/somramnani/FriendFinder#readme",
-  "dependencies": {
-    "dotenv": "^8.0.0",
-    "express": "^4.17.1",
-    "express-handlebars": "^3.1.0",
-    "mysql2": "^1.6.5",
-    "sequelize": "^5.8.6"
-  }
+  "homepage": "https://github.com/somramnani/FriendFinder#readme"
 }

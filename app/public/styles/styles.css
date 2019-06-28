@@ -13,10 +13,11 @@
 }
 
 .background-color {
-  background-image: url("../images/friends.jpg");
+  
+  background-image: url("/friends1");
 }
 .surveypage-background-color{
-  background-image: url("../images/friends2.jpg");
+  background-image: url("/friends2");
 }
 
 .Navbarfont{

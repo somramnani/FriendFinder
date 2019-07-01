@@ -33,7 +33,7 @@ module.exports = function(app) {
 
 
     app.get("/friends1", function(req, res) {
-      res.sendFile(path.join(__dirname, "/../public/images/friends,jpg"));
+      res.sendFile(path.join(__dirname, "/../public/images/friends.jpg"));
             
     });
 
